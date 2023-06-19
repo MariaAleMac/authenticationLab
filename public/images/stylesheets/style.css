@@ -1,0 +1,47 @@
+/*  Name: Maria Macias
+StudentId: 301290835
+Date: May 28th 2023
+File name: style.js */
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: black;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+.nav {
+  display: flex;
+  background-color: bisque;
+  padding: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.portfolio {
+ display: flex;
+ gap: 25px;
+ padding: 20px 0px;
+ justify-content: space-between;
+}
+
+.portfolio li {
+  font-size: 24px;
+  padding: 10px 0px;
+}
+
+.portfolio-description img {
+  border-radius: 10px;
+}
+
+.portfolio-description {
+  font-size:  24px;
+}
+
+.project-description {
+  font-size:  18px;
+}

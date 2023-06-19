@@ -1,0 +1,68 @@
+<!-- Name: Maria Macias
+StudentId: 301290835
+Date: June 18th 2023
+File name: contacts.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./partials/head'); %>
+</head>
+<body class="container">
+
+<!-- Navigation bar -->
+<header>
+  <%- include('./partials/header'); %>
+</header>
+
+<!-- body home authentication -->
+<main>
+  <!-- body contact me form -->
+<main>
+  <div class="jumbotron">
+    <!-- Title -->
+    <h1>Business Contacts List!</h1>
+    <!-- Contact form -->
+    <div class="row">
+      <div class="col-md-12 mb-md-0 mb-4 mt-4 d-flex flex-row-reverse">
+        <a class="btn btn-primary" href="/contacts/add">
+          <i  class="bi bi-plus"> Create New Contact</i>
+        </a>
+      </div>
+      <div class="col-md-12 mb-md-0 mb-5 my-5">
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Number</th>
+                <th scope="col">Email</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for(let count = 0; count < ContactsList.length; count++) { %>
+                <tr>
+                    <td><%= ContactsList[count].name %></td>
+                    <td><%= ContactsList[count].number %></td>
+                    <td><%= ContactsList[count].email %></td>
+                    <td>
+                      <a class="btn btn-primary" href="/contacts/edit/<%= ContactsList[count]._id %>">
+                          <i  class="bi bi-pencil"></i>
+                      </a>
+                      <a class="btn btn-primary" href="/contacts/delete/<%= ContactsList[count]._id %>">
+                          <i  class="bi bi-trash"></i>
+                      </a>
+                  </td>
+                </tr>
+              <% } %>
+            </tbody>
+          </table>
+      </div>
+  </div>
+</main>
+
+<footer>
+  <%- include('./partials/footer'); %>
+</footer>
+
+</body>
+</html>

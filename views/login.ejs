@@ -1,0 +1,70 @@
+<!-- Name: Maria Macias
+StudentId: 301290835
+Date: June 18th 2023
+File name: login.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./partials/head'); %>
+</head>
+<body class="container">
+
+<!-- Navigation bar -->
+<header>
+  <%- include('./partials/header'); %>
+</header>
+
+<!-- body home authentication -->
+<main>
+  <!-- body contact me form -->
+<main>
+  <div class="jumbotron">
+    <!-- Title -->
+    <h1>Login!</h1>
+    <!-- Contact form -->
+    <div class="row">
+      <div class="col-md-12 mb-md-0 mb-5">
+          <form id="contact-form" name="contact-form" action="/login" method="POST">
+              <div class="row justify-content-md-center">
+                <!-- Username input -->
+                  <div class="col-md-6">
+                      <div class="md-form mb-0 mt-3">
+                        <label for="name" class="">Username</label>
+                        <input type="text" id="username" name="username" class="form-control">
+                      </div>
+                  </div>
+              </div>
+              <div class="row justify-content-md-center">
+                <!-- Email input -->
+                <div class="col-md-6">
+                  <div class="md-form mb-0 mt-3">
+                    <label for="email" class="">Email</label>
+                    <input type="text" id="email" name="email" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <div class="row justify-content-md-center">
+                <!-- Password input -->
+                <div class="col-md-6">
+                  <div class="md-form mb-0 mt-3">
+                    <label for="password" class="">Password</label>
+                    <input type="password" id="password" name="password" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <!-- Submit button and login -->
+              <div class="text-center text-md-center mt-5">
+                <button class="btn btn-primary px-5" type="submit">Login</button>
+              </div>
+              <div class="text-center mt-2"><a href="/register">Register</a></div>
+          </form>
+      </div>
+  </div>
+</main>
+
+<footer>
+  <%- include('./partials/footer'); %>
+</footer>
+
+</body>
+</html>
